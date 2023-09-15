@@ -3,6 +3,7 @@ package controller;
 public class ThreadSapo extends Thread{
 
 	private int nSapo;
+ private static int colocacao;
 	
 	public ThreadSapo(int nSapo) {
 		this.nSapo = nSapo;
@@ -25,7 +26,9 @@ public class ThreadSapo extends Thread{
 			//Verifica a posicao do sapo
 			if (posicao >= chegada) {
 				System.out.println("O sapo "+nSapo+" ultrapssou a linha de chegada!!");
-			} else {
+     colocacao++;
+     System.out.println("O sapo "+nSapo+" chegou em"+colocacao+" lugar!!");			
+} else {
 				System.out.println("O sapo "+nSapo+" percorreu no total: "+posicao+" metros");
 			}
 			try {
